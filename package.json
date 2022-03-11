@@ -1,0 +1,17 @@
+{
+  "name": "making-typescript-stick",
+  "version": "0.0.0",
+  "description": "Mike North's \"making typescript stick\" course",
+  "main": "index.js",
+  "repository": "https://github.com/mike-north/making-typescript-stick",
+  "author": "Mike North <michael.l.north@gmail.com>",
+  "license": "BSD-2-Clause",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "volta": {
+    "node": "16.14.0",
+    "yarn": "1.22.17"
+  }
+}
