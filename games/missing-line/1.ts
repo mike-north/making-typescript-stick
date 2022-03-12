@@ -1,5 +1,5 @@
 const p1 = Promise.resolve(42);
-const p2 = Promise.resolve("Live, the universe and everything");
+const p2 = Promise.resolve("Life, the universe and everything");
 
 type UnwrapPromise<T> =
   T extends Promise<infer P> ? P : never /// BLANK
