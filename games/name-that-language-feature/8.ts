@@ -1,0 +1,3 @@
+
+type SetTimeoutType = Window['setTimeout']
+//                     ^?
