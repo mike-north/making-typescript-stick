@@ -1,2 +1,2 @@
-export type Colors = "red" | "green" | "blue";
+type Colors = "red" | "green" | "blue";
 //                      ^?

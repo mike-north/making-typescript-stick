@@ -1,6 +1,5 @@
-export type ConsoleMethods = {
+type ConsoleMethods = {
   [K in 'log' | 'warn' | 'error']: Console[K]
-  //  ^?
 }
 
 /*

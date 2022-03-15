@@ -7,6 +7,7 @@
   "author": "Mike North <michael.l.north@gmail.com>",
   "license": "BSD-2-Clause",
   "private": true,
+  "workspaces": ["challenges/*"],
   "devDependencies": {
     "prettier": "^2.5.1",
     "typescript": "^4.6.2"
