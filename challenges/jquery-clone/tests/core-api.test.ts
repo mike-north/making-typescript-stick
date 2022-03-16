@@ -54,21 +54,20 @@ test('`$("button.continue").html("Next Step...")` returns something truthy', () 
 test('`$("button.continue").html("Next Step...")` returns something truthy', async () => {
   const element = document.createElement("div");
   element.id = "test-element";
-  element.innerHTML = `<div id='weather-temp'></div>`;
+  element.innerHTML = `<div id='post-info'></div>`;
   document.body.appendChild(element);
 
   const result = await $.ajax({
-    url: "https://jsonplaceholder.typicode.com/posts/1",
-    data: {
-      zipcode: "97201",
-    },
+    url: "https://jsonplaceholder.typicode.com/posts/33",
     success: (result) => {
-      $("#weather-temp").html("<strong>" + result + "</strong> degrees");
+      $("#post-info").html(
+        "<strong>" + result.title + "</strong>" + result.body
+      )
     },
-  });
+  })
 
   expect(result).toBeTruthy();
   expect(JSON.stringify(result)).toBe(
-    '{"userId":1,"id":1,"title":"sunt aut facere repellat provident occaecati excepturi optio reprehenderit","body":"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto"}'
+    '{\"userId\":4,\"id\":33,\"title\":\"qui explicabo molestiae dolorem\",\"body\":\"rerum ut et numquam laborum odit est sit\\nid qui sint in\\nquasi tenetur tempore aperiam et quaerat qui in\\nrerum officiis sequi cumque quod\"}'
   );
 });

@@ -27,18 +27,14 @@ module $ {
 
   export interface AjaxInfo {
     url: string;
-    data: Record<string, string>;
     success?: (resp: unknown) => void,
     method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   }
   export function ajax(
     requestInfo: AjaxInfo,
   ): Promise<unknown> {
-    const { url, data, success, method = 'GET' } = requestInfo;
-    const fullUrl = method === 'GET' ? `${url}?${new URLSearchParams(data).toString()}` : url;
-    console.log({ fullUrl })
-    const init: nodeFetch.RequestInit = method === 'GET' ? {} : {body: JSON.stringify(data)}
-    return nodeFetch.default(fullUrl, init).then((resp) => {
+    const { url, success } = requestInfo;
+    return nodeFetch.default(url).then((resp) => {
       return resp.json().then((data: unknown) => {
         success && success(data);
         return data;
