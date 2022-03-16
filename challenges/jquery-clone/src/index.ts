@@ -27,7 +27,7 @@ module $ {
 
   export interface AjaxInfo {
     url: string;
-    success?: (resp: unknown) => void,
+    success?: (resp: JSONValue) => void,
     method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   }
   export function ajax(
@@ -35,7 +35,7 @@ module $ {
   ): Promise<unknown> {
     const { url, success } = requestInfo;
     return nodeFetch.default(url).then((resp) => {
-      return resp.json().then((data: unknown) => {
+      return resp.json().then((data: JSONValue) => {
         success && success(data);
         return data;
       });
