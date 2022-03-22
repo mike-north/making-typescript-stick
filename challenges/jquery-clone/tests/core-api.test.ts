@@ -56,7 +56,7 @@ test('`$("button.continue").html("Next Step...")` returns something truthy', asy
   const result = await $.ajax({
     url: "https://jsonplaceholder.typicode.com/posts/33",
     success: (result) => {
-      if (typeof result === 'object' && !Array.isArray(result)) {
+      if (typeof result === "object" && !Array.isArray(result)) {
         $("#post-info").html(
           "<strong>" + result.title + "</strong>" + result.body
         );

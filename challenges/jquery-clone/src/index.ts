@@ -26,12 +26,10 @@ module $ {
 
   export interface AjaxInfo {
     url: string;
-    success?: (resp: JSONValue) => void,
-    method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+    success?: (resp: JSONValue) => void;
+    method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
   }
-  export function ajax(
-    requestInfo: AjaxInfo,
-  ): Promise<unknown> {
+  export function ajax(requestInfo: AjaxInfo): Promise<unknown> {
     const { url, success } = requestInfo;
     return fetch(url).then((resp) => {
       return resp.json().then((data: JSONValue) => {
@@ -41,6 +39,5 @@ module $ {
     });
   }
 }
-
 
 export default $;

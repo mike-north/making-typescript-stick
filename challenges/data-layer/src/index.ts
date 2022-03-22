@@ -23,17 +23,20 @@ export type DataStorageMethods = {
   [K in DataEntities as `add${Capitalize<K>}`]: (
     arg: DataEntityMap[K]
   ) => DataEntityMap[K];
-} & {
-  [K in DataEntities as `get${Capitalize<K>}`]: (
-    id: string
-  ) => DataEntityMap[K];
-} & {
-  [K in DataEntities as `getAll${Capitalize<K>}s`]: (
-    id: string
-  ) => DataEntityMap[K][];
-} & {
-  [K in DataEntities as `clear${Capitalize<K>}s`]: () => null;
-};
+} &
+  {
+    [K in DataEntities as `get${Capitalize<K>}`]: (
+      id: string
+    ) => DataEntityMap[K];
+  } &
+  {
+    [K in DataEntities as `getAll${Capitalize<K>}s`]: (
+      id: string
+    ) => DataEntityMap[K][];
+  } &
+  {
+    [K in DataEntities as `clear${Capitalize<K>}s`]: () => null;
+  };
 
 export class DataStore implements DataStorageMethods {
   #dataStorage: DataStorage = {

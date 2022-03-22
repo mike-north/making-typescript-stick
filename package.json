@@ -7,9 +7,11 @@
   "author": "Mike North <michael.l.north@gmail.com>",
   "license": "BSD-2-Clause",
   "private": true,
-  "workspaces": ["challenges/*"],
+  "workspaces": [
+    "challenges/*"
+  ],
   "devDependencies": {
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.0",
     "typescript": "^4.6.2"
   },
   "volta": {
