@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "module": "CommonJS",
     "target": "es2017",
     "moduleResolution": "Node",
@@ -9,7 +8,8 @@
     "useUnknownInCatchVariables": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "noEmit": true
   },
   "include": ["src"]
 }

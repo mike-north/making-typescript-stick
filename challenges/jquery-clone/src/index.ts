@@ -10,6 +10,30 @@ class SelectorResult {
       e.innerHTML = contents;
     });
   }
+  show() {
+    this.#elements.forEach((e) => {
+      if (e instanceof HTMLElement) {
+        e.style.visibility = "visible";
+      }
+    });
+  }
+  hide() {
+    this.#elements.forEach((e) => {
+      if (e instanceof HTMLElement) {
+        e.style.visibility = "hidden";
+      }
+    });
+  }
+  on<K extends keyof HTMLElementEventMap>(
+    event: K,
+    callback: (event: HTMLElementEventMap[K]) => void
+  ) {
+    this.#elements.forEach((e) => {
+      if (e instanceof HTMLElement) {
+        e.addEventListener(event, callback);
+      }
+    });
+  }
 }
 
 function $(selector: string) {
@@ -32,9 +56,9 @@ module $ {
   export function ajax(requestInfo: AjaxInfo): Promise<unknown> {
     const { url, success } = requestInfo;
     return fetch(url).then((resp) => {
-      return resp.json().then((data: JSONValue) => {
-        success && success(data);
-        return data;
+      return resp.json().then((respData: JSONValue) => {
+        success && success(respData);
+        return respData;
       });
     });
   }
