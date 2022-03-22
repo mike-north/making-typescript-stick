@@ -2,14 +2,14 @@ name: CI
 
 on:
   pull_request:
-    branches: [solution]
+    branches: [solutions]
     paths:
       - 'challenges/**'
       - '.github/**'
       - 'package.json'
       - 'yarn.lock'
   push:
-    branches: [solution]
+    branches: [solutions]
     paths:
       - 'challenges/**'
       - '.github/**'
