@@ -8,4 +8,9 @@ export interface Song extends DataEntity {
   singer: string;
 }
 
+export type DataEntityMap = {
+  movie: Movie;
+  song: Song;
+};
+
 export class DataStore {}
