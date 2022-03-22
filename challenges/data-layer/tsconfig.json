@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
     "module": "CommonJS",
-    "target": "es2017",
+    "target": "ES2020",
     "moduleResolution": "Node",
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "useUnknownInCatchVariables": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitAny": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "noEmit": true
   },
   "include": ["src"]
 }

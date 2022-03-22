@@ -19,6 +19,10 @@ type DataStorage = {
   [K in DataEntities as `${K}s`]: Record<string, DataEntityMap[K]>;
 };
 
+function isDefined<T>(value: T | undefined): value is T {
+  return typeof value !== 'undefined';
+}
+
 export type DataStorageMethods = {
   [K in DataEntities as `add${Capitalize<K>}`]: (
     arg: DataEntityMap[K]
@@ -27,7 +31,7 @@ export type DataStorageMethods = {
   {
     [K in DataEntities as `get${Capitalize<K>}`]: (
       id: string
-    ) => DataEntityMap[K];
+    ) => DataEntityMap[K] | undefined;
   } &
   {
     [K in DataEntities as `getAll${Capitalize<K>}s`]: (
@@ -69,11 +73,11 @@ export class DataStore implements DataStorageMethods {
   getAllSongs() {
     return Object.keys(this.#dataStorage.songs).map(
       (k) => this.#dataStorage.songs[k]
-    );
+    ).filter(isDefined);
   }
   getAllMovies() {
     return Object.keys(this.#dataStorage.movies).map(
       (k) => this.#dataStorage.movies[k]
-    );
+    ).filter(isDefined);;
   }
 }

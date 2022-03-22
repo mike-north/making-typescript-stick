@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsc -b .",
+    "build:src": "tsc -b .",
+    "build:tests": "(cd tests && tsc -b .)",
+    "build": "yarn build:src && yarn build:tests",
     "test": "jest"
   },
   "devDependencies": {
