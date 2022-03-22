@@ -1,5 +1,4 @@
-import * as nodeFetch from "node-fetch";
-import * as querystring from 'querystring';
+import fetch from "node-fetch";
 
 class SelectorResult {
   #elements: NodeListOf<Element>;
@@ -20,10 +19,10 @@ function $(selector: string) {
 }
 
 module $ {
-  type JSONPrimitive = string | number | boolean | null;
-  type JSONObject = { [member: string]: JSONValue };
-  type JSONArray = JSONValue[];
-  type JSONValue = JSONPrimitive | JSONObject | JSONArray;
+  export type JSONPrimitive = string | number | boolean | null;
+  export type JSONObject = { [member: string]: JSONValue };
+  export type JSONArray = JSONValue[];
+  export type JSONValue = JSONPrimitive | JSONObject | JSONArray;
 
   export interface AjaxInfo {
     url: string;
@@ -34,7 +33,7 @@ module $ {
     requestInfo: AjaxInfo,
   ): Promise<unknown> {
     const { url, success } = requestInfo;
-    return nodeFetch.default(url).then((resp) => {
+    return fetch(url).then((resp) => {
       return resp.json().then((data: JSONValue) => {
         success && success(data);
         return data;
@@ -42,5 +41,6 @@ module $ {
     });
   }
 }
+
 
 export default $;

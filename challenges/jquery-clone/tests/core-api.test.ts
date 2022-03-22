@@ -3,10 +3,6 @@
  */
 import $ from "../src";
 
-function sum(a: number, b: number) {
-  return a + b;
-}
-
 test("module's default export is a value", () => {
   expect($).toBeTruthy();
 });
