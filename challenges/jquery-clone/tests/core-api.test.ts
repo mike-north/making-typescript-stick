@@ -41,7 +41,7 @@ test('`$("button.continue").html("Next Step...")` returns something truthy', () 
   const result = $("button.continue");
   expect(result).toBeTruthy();
   result.html("Next Step...");
-  expect(document.querySelector("button.continue").innerHTML).toBe(
+  expect(document.querySelector("button.continue")!.innerHTML).toBe(
     "Next Step..."
   );
 
@@ -105,7 +105,7 @@ test("`$.ajax test", async () => {
   const result = await $.ajax({
     url: "https://jsonplaceholder.typicode.com/posts/33",
     success: (result) => {
-      if (typeof result === "object" && !Array.isArray(result)) {
+      if (result && typeof result === "object" && !Array.isArray(result)) {
         $("#post-info").html(
           "<strong>" + result.title + "</strong>" + result.body
         );

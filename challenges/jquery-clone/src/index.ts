@@ -38,7 +38,6 @@ class SelectorResult {
 
 function $(selector: string) {
   const elements = document.querySelectorAll(selector);
-  if (elements.length === 0) return null;
   return new SelectorResult(elements);
 }
 
