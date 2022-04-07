@@ -3335,9 +3335,9 @@ saxes@^5.0.1:
     xmlchars "^2.2.0"
 
 scripty@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/scripty/-/scripty-2.0.0.tgz#25761bb2e237a7563f705d87357db07791d38459"
-  integrity sha512-vbd4FPeuNwYNGtRtYa1wDZLPCx5PpW6VrldCEiBGqPz7Je1xZOgNvVPD2axymvqNghBIRiXxAU+JwYrOzvuLJg==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/scripty/-/scripty-2.1.0.tgz#8f766acdaf53070e82587f53d878e0f60e431761"
+  integrity sha512-vvp8DWmLyIyesQYjxTh5cH3odsf1+srXKJUhrgXjhEk32RqcGkjqTEuKLyBCoBH4k6WdzF2uYpr4zi6ih4xgOA==
   dependencies:
     async "^2.6.1"
     glob "^7.0.3"
