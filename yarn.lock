@@ -1182,10 +1182,10 @@
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
-"@tsd/typescript@~4.5.2":
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@tsd/typescript/-/typescript-4.5.5.tgz#23fc27852d53987c4ba83bd3a9c1a6a24e957764"
-  integrity sha512-TxQ9QiUT94ZjKu++ta/iwTMVHsix4ApohnaHPTSd58WQuTjPIELP0tUYcW7lT6psz7yZiU4eRw+X4v/XV830Sw==
+"@tsd/typescript@~4.7.3":
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/@tsd/typescript/-/typescript-4.7.3.tgz#b5855528a0cd35039341c4002ec7a74b71c34467"
+  integrity sha512-jjxcFpaWwETZZedPuPhWehlHA6cifStKV8viwc80FUVSUdv6sC4V0dWJ3OCBIWOQcxk7roxCDvzrc40CoDr5tg==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.1.18"
@@ -3604,12 +3604,12 @@ trim-newlines@^3.0.0:
   resolved "https://registry.yarnpkg.com/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
-tsd@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/tsd/-/tsd-0.19.1.tgz#c37891ad907d6ce2122e4a20c99cceca5767d713"
-  integrity sha512-pSwchclr+ADdxlahRUQXUrdAIOjXx1T1PQV+fLfVLuo/S4z+T00YU84fH8iPlZxyA2pWgJjo42BG1p9SDb4NOw==
+tsd@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/tsd/-/tsd-0.21.0.tgz#fb1a1aa022cfb4a6d1065bb569687e8ac8f72daf"
+  integrity sha512-6DugCw1Q4H8HYwDT3itzgALjeDxN4RO3iqu7gRdC/YNVSCRSGXRGQRRasftL1uKDuKxlFffYKHv5j5G7YnKGxQ==
   dependencies:
-    "@tsd/typescript" "~4.5.2"
+    "@tsd/typescript" "~4.7.3"
     eslint-formatter-pretty "^4.1.0"
     globby "^11.0.1"
     meow "^9.0.0"
